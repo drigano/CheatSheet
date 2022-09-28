@@ -155,10 +155,24 @@ tata
 ## Protection de caractères
 Le shell utilise defférents caractères particuliers pour effectuer ses propres traitements.
 Pour utiliser ces caractères comme de simple caractère, il faut les protéger.
-- Utiliser `\` ou `" "` ou `' '`.
+- Utiliser `\` ou `" "` ou `' '` en fonction du contexte.
 
+# Les processus
+Un **programme** est une suite d’instructions que le système doit faire exécuter au processeur pour résoudre un problème. La suite d’instructions est rangée dans un fichier.
+Un **processus** est un programme en train d’être exécuté par le système dans un environnement donné.
 
+Le processeur bascule entre les différents programmes à exécuter (chacun s’exécutant quelques dizaines de millisecondes).
+=⇒ **pseudo-parallélisme**
+Modèle conceptuel reposant sur les **processus séquentiels**.
 
+## Représentation interne
+Un processus correspond à une zone mémoire de taille fixe dans laquelle on stocke :
+- les informations sur le processus
+- le code : les instructions à exécuter (dans le langage du processeur)
+- la zone de données : les variables manipulées par le code
+- la pile d’exécution : les paramètres d’appel des fonctions
+
+Un processus est donc représenté comme un programme qui s’exécute et qui possède son **<a href="https://dictionnaire.sensagent.leparisien.fr/Compteur%20ordinal/fr-fr/">propre compteur ordinal</a>**
 
 [//]: # ( <p align="center"> <img src="" /> </p> )
 
