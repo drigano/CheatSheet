@@ -45,6 +45,7 @@ processus, etc.
   - -i affiche les numéros d’i-nœuds des fichiers.
   - -a liste aussi les fichiers cachés.
   - -l version longue, détaillé.
+  - <a href="https://www.google.com">Précision</a>
 - rm    : supprime un fichier.
 - touch : modifie les caractéristiques de date d’un fichier (permet également de créer un fichier vide).
 - mkdir : créer un répertoire.
@@ -104,11 +105,35 @@ Ces informations sont stockées dans des fichiers d’administration
 - '-' : none
 <p align="center"> <img src="https://user-images.githubusercontent.com/50296202/192885470-ba61f8df-325c-487c-a108-0bf2fdc08402.png" /> </p>
 
+### Modifications des droits
+- `chown` : Permet de changer le propriétaire (utilisateur et groupe)
+- `chgrp` : Permet de changer le groupe propriétaire
+- `chmod` : Permet de changer les droits -> `chmod [options] mode fichier`
+  mode : 
+  - avec (r,w,x) -> rw--wxr-- ou u=rw- ou o-=x
+  - avec la manière numérique en octal -> 777
+- `umask` : Permet d’indiquer les droits à la création, les droits obtenus sont le complémentaire de ceux indiqués par le masque.
+  - utilise des masques sous forme numérique octale
+  - sans paramètre : indique le masque courant
+  - avec le masque en paramètre : modifie le masque courant
 
+<p align="center" > <img width="200" src="https://user-images.githubusercontent.com/50296202/192887329-ba411e01-3154-4e61-9773-0c0853c8df7d.png" /></p>
+Donc:
+- 700 -> rwx------
+- 751 -> rwxr-x--x
+- 640 -> rw-r-----
 
-
+## Premier caractère des droits dans la commande ls -l
+- d : répertoire
+- l : lien
+- c : pilote caractère
+- '-' : régulier
+- b : pilote bloc
+- p : pipe/tube
 
 [//]: # ( <p align="center"> <img src="" /> </p> )
+
+
 
 
 
