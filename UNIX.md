@@ -45,7 +45,7 @@ processus, etc.
   - -i affiche les numéros d’i-nœuds des fichiers.
   - -a liste aussi les fichiers cachés.
   - -l version longue, détaillé.
-  - <a href="https://www.google.com">Précision</a>
+  - <a href="https://github.com/drigano/CheatSheet/edit/main/UNIX.md#premier-caract%C3%A8re-des-droits-dans-la-commande-ls--l">Précision</a>
 - rm    : supprime un fichier.
 - touch : modifie les caractéristiques de date d’un fichier (permet également de créer un fichier vide).
 - mkdir : créer un répertoire.
