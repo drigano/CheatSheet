@@ -172,7 +172,24 @@ Un processus correspond à une zone mémoire de taille fixe dans laquelle on sto
 - la zone de données : les variables manipulées par le code
 - la pile d’exécution : les paramètres d’appel des fonctions
 
-Un processus est donc représenté comme un programme qui s’exécute et qui possède son **<a href="https://dictionnaire.sensagent.leparisien.fr/Compteur%20ordinal/fr-fr/">propre compteur ordinal</a>**
+Un processus est donc représenté comme un programme qui s’exécute et qui possède son **<a href="https://dictionnaire.sensagent.leparisien.fr/Compteur%20ordinal/fr-fr/">propre compteur ordinal</a>**.
+Les différentes informations nécessaires au fonctionnement du processus constituent le **contexte d’exécution** du processus.
+
+## La création d’un processus
+Sous Unix les processus forment une hiérarchie :
+- Chaque processus à un processus père.
+- Un processus peut avoir 0, 1, n processus fils.
+*Seul le processus init, le processus qui initialise le système n’a pas de processus père*
+
+## Les modes de fonctionnement
+On distingue deux modes de fonctionnement :
+- En avant-plan (foreground):
+  - Le père attend la terminaison du processus fils avant de lancer un autre processus.
+  - L’utilisateur peut interagir avec le processus en cours d’exécution (saisie de données).
+- En arrière-plan (background):
+  - Le père n’attend pas que le fils ait terminé pour continuer à travailler.
+  - Ces processus sont le plus souvent des serveurs en attente de requêtes (par exemple serveur d’impression, serveur de messagerie, . . .)
+
 
 [//]: # ( <p align="center"> <img src="" /> </p> )
 
