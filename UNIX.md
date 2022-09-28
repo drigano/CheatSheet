@@ -119,9 +119,9 @@ Ces informations sont stockées dans des fichiers d’administration
 
 <p align="center" > <img width="200" src="https://user-images.githubusercontent.com/50296202/192887329-ba411e01-3154-4e61-9773-0c0853c8df7d.png" /></p>
 Donc:
-- 700 -> rwx------
-- 751 -> rwxr-x--x
-- 640 -> rw-r-----
+- 700 -> `rwx------`
+- 751 -> `rwxr-x--x`
+- 640 -> `rw-r-----`
 
 ## Premier caractère des droits dans la commande ls -l
 - `d` : répertoire
