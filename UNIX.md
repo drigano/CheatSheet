@@ -1,6 +1,6 @@
 # Cheat Sheet UNIX
 *Résumé non exaustif du contenue du cours UNIX*
-## 1) Introduction
+# 1) Introduction
 ### Le noyau
 **Le noyau** est la couche de base d’un système d’exploitation.
 Il gère la mémoire, l’accès aux périphériques (disque dur, carte son, carte
@@ -45,7 +45,7 @@ processus, etc.
   - -i affiche les numéros d’i-nœuds des fichiers.
   - -a liste aussi les fichiers cachés.
   - -l version longue, détaillé.
-  - <a href="https://github.com/drigano/CheatSheet/blob/main/UNIX.md#premier-caract%C3%A8re-des-droits-dans-la-commande-ls--l">Précision</a>
+  - <a href="https://github.com/drigano/CheatSheet/blob/main/UNIX.md#premier-caract%C3%A8re-des-droits-dans-la-commande-ls--l">Premier caractère des droits dans la commande ls -l</a>
 - rm    : supprime un fichier.
 - touch : modifie les caractéristiques de date d’un fichier (permet également de créer un fichier vide).
 - mkdir : créer un répertoire.
@@ -124,12 +124,41 @@ Donc:
 - 640 -> rw-r-----
 
 ## Premier caractère des droits dans la commande ls -l
-- d : répertoire
-- l : lien
-- c : pilote caractère
-- '-' : régulier
-- b : pilote bloc
-- p : pipe/tube
+- `d` : répertoire
+- `l` : lien
+- `c` : pilote caractère
+- `-` : régulier
+- `b` : pilote bloc
+- `p` : pipe/tube
+
+## Wildcards
+Permet d'agir avec plusieurs objets à la fois.
+- `*` : tout selectionner.
+- `?` : désigne un caractère quelconque.
+- `[...]` : désigne un caractère quelconque appartenant à la liste.
+- `[ˆ...]` : désigne une liste de caractères à exclure.
+- `{...,...}` : désigne une liste de chaînes de caractères.
+- `∼` : le tilde est interprété comme le chemin absolue qui conduit au répertoire home.
+### Exemple d'utilisation avec ls:
+```
+$ ls
+lulu lala toto titi tata
+$ ls l*
+lulu lala
+$ ls ?a ?a
+lala tata
+$ ls t[oi]t[oi]
+toto titi
+$ ls t[ˆoi]t[ˆoi]
+tata
+```
+## Protection de caractères
+Le shell utilise defférents caractères particuliers pour effectuer ses propres traitements.
+Pour utiliser ces caractères comme de simple caractère, il faut les protéger.
+- Utiliser `\` ou `" "` ou `' '`.
+
+
+
 
 [//]: # ( <p align="center"> <img src="" /> </p> )
 
