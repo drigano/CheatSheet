@@ -15,10 +15,10 @@ processus, etc.
 ## Connexion et déconnexion nom@machine$
 
 ### Commandes utiles
-- date -> affiche la date et l'heure
-- who  -> liste des utilisateurs connectés
-- cal  -> affiche le calendrier
-- man  -> mode d'emploi
+- `date` -> affiche la date et l'heure
+- `who`  -> liste des utilisateurs connectés
+- `cal`  -> affiche le calendrier
+- `man`  -> mode d'emploi
 
 ## Les fichiers et répertoires
 
@@ -39,21 +39,21 @@ processus, etc.
 <p align="center"> <img src="https://user-images.githubusercontent.com/50296202/192873671-8aacf9f7-c37e-478f-af8a-dd379cbf279e.png" /> </p>
 
 ### Commandes utiles
-- cat   : affiche le contenu d'un fichier.
-- stat  : stats d'un fichier.
-- ls    : affiche les caractéristiques d’une liste de fichiers.
-  - -i affiche les numéros d’i-nœuds des fichiers.
-  - -a liste aussi les fichiers cachés.
-  - -l version longue, détaillé.
+- `cat`   : affiche le contenu d'un fichier.
+- `stat`  : stats d'un fichier.
+- `ls`    : affiche les caractéristiques d’une liste de fichiers.
+  - `-i` affiche les numéros d’i-nœuds des fichiers.
+  - `-a` liste aussi les fichiers cachés.
+  - `-l` version longue, détaillé.
   - <a href="https://github.com/drigano/CheatSheet/blob/main/UNIX.md#premier-caract%C3%A8re-des-droits-dans-la-commande-ls--l">Premier caractère des droits dans la commande ls -l</a>
-- rm    : supprime un fichier.
-- touch : modifie les caractéristiques de date d’un fichier (permet également de créer un fichier vide).
-- mkdir : créer un répertoire.
-- cd    : change le répertoire courant.
-- pwd   : donne le repertoire courant en chemin absolu.
-- rmdir : supprime un répertoire vide.
-- cp    : copie de fichier *source -> destination*
-- mv    : déplace/renomme un fichier *source -> destination*
+- `rm`    : supprime un fichier.
+- `touch` : modifie les caractéristiques de date d’un fichier (permet également de créer un fichier vide).
+- `mkdir` : créer un répertoire.
+- `cd`    : change le répertoire courant.
+- `pwd`   : donne le repertoire courant en chemin absolu.
+- `rmdir` : supprime un répertoire vide.
+- `cp`    : copie de fichier *source -> destination*
+- `mv`    : déplace/renomme un fichier *source -> destination*
 
 ## Les liens
 Un lien est un fichier spécial qui permet de faire plusieurs références (portant donc des noms identiques ou différents) à un même fichier sur le disque dur.
@@ -81,7 +81,7 @@ Un lien symbolique est un fichier de type lien qui contient le chemin et le nom 
 **Les liens symboliques ont chacun leur propre i-nœud ; leur contenu désigne un même fichier régulier (ils sont du type liens)**
 
 ### Création de liens
-ln [options] destination nom_du_lien
+`ln [options] destination nom_du_lien`
 - sans option : création de liens physiques
 - avec l’option -s : création de liens symboliques
 
@@ -99,10 +99,10 @@ Ces informations sont stockées dans des fichiers d’administration
 - Le groupe propriétaire
 - Les autres
 ### Les droits sont définis par quatres caractères :
--  r  : read
--  w  : write
--  x  : execute
-- '-' : none
+- `r`  : read
+- `w`  : write
+- `x`  : execute
+- `-` : none
 <p align="center"> <img src="https://user-images.githubusercontent.com/50296202/192885470-ba61f8df-325c-487c-a108-0bf2fdc08402.png" /> </p>
 
 ### Modifications des droits
